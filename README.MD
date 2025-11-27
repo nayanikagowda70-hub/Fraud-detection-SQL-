@@ -1,4 +1,4 @@
-Fraud Detection Using SQL
+### Fraud Detection Using SQL
 
 This project looks at patterns of fraudulent behaviour in an online payments dataset.
 The goal was to analyse transaction activity, spot risky behaviour, and build simple fraud insights using SQL.
