@@ -1,3 +1,4 @@
+```sql
 USE fraud_detection;
 
 -- Count total rows
@@ -49,3 +50,5 @@ WHERE isFraud = 1
   AND amount > 0
 ORDER BY amount DESC
 LIMIT 10;
+```
+
