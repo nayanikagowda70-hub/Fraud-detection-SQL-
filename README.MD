@@ -7,18 +7,18 @@ The work was done in MySQL Workbench using a dataset of 40,000 online payment re
 
 Project Goals
 
-Look at how transactions behave across different payment types
+--- Look at how transactions behave across different payment types
 
-Find unusual or suspicious activity
+--- Find unusual or suspicious activity
 
-Measure how much fraud appears in the dataset
+--- Measure how much fraud appears in the dataset
 
-Identify accounts and transactions that look risky
+--- Identify accounts and transactions that look risky
 
 
 Dataset Information
 
-Each transaction contains:
+--- Each transaction contains:
 
 step – time index (simulation hour)
 
