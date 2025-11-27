@@ -16,7 +16,7 @@ Measure how much fraud appears in the dataset
 Identify accounts and transactions that look risky
 
 
-ataset Information
+Dataset Information
 
 Each transaction contains:
 
