@@ -5,7 +5,7 @@ The goal was to analyse transaction activity, spot risky behaviour, and build si
 
 The work was done in MySQL Workbench using a dataset of 40,000 online payment records.
 
-Project Goals
+### Project Goals
 
 --- Look at how transactions behave across different payment types
 
@@ -16,7 +16,7 @@ Project Goals
 --- Identify accounts and transactions that look risky
 
 
-Dataset Information
+### Dataset Information
 
 --- Each transaction contains:
 
@@ -37,7 +37,7 @@ isFlaggedFraud – flagged by system
 This data is publicly available and often used for fraud modelling.
 
 
-Key SQL Queries Used
+### Key SQL Queries Used
 
 ```sql
 USE fraud_detection;
