@@ -92,12 +92,9 @@ WHERE isFraud = 1
 ORDER BY amount DESC
 LIMIT 10;
 ```
-### Additional Queries Used
---- Create helper tables (accounts + transaction groups) 
+-- Create helper tables (accounts + transaction groups)
+DROP TABLE IF EXISTS accounts;
 
-DROP TABLE IF EXISTS transaction_types;
-
---- Group transaction types into simple categories
 CREATE TABLE accounts AS
 SELECT DISTINCT
     name AS account_id
@@ -107,7 +104,10 @@ FROM (
     SELECT nameDest AS name FROM transactions
 ) AS all_names;
 
---- Group transaction types into simple categories
+
+-- Create a table grouping transaction types
+DROP TABLE IF EXISTS transaction_types;
+
 CREATE TABLE transaction_types AS
 SELECT DISTINCT
     type,
@@ -118,7 +118,9 @@ SELECT DISTINCT
     END AS type_group
 FROM transactions;
 
---- Join accounts with transactions (sender + receiver)SELECT
+
+-- Join accounts with transactions (sender + receiver)
+SELECT
     t.step,
     t.type,
     t.amount,
@@ -132,7 +134,8 @@ JOIN accounts d
     ON t.nameDest = d.account_id
 LIMIT 20;
 
---- Fraud rate by grouped transaction types
+
+-- Fraud rate by grouped transaction types
 SELECT
     tt.type,
     tt.type_group,
@@ -148,7 +151,8 @@ JOIN transaction_types tt
 GROUP BY tt.type, tt.type_group
 ORDER BY fraud_rate_percent DESC;
 
---- Accounts with the highest fraud-sending behaviour
+
+-- Accounts with the highest fraud-sending behaviour
 WITH sender_fraud AS (
     SELECT
         nameOrig AS account_id,
