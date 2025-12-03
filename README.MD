@@ -176,3 +176,29 @@ JOIN accounts a
 WHERE s.fraud_sent > 0
 ORDER BY fraud_rate_percent DESC, s.fraud_sent DESC
 LIMIT 20;
+
+###  Project Screenshots
+
+### Total Rows in Dataset
+![Total Rows](total_rows.png)
+
+### Transaction Preview
+![Preview](preview_first10.png)
+
+### Overall Fraud Rate
+![Overall Fraud Rate](overall_fraud_rate.png)
+
+### Fraud Rate by Transaction Type
+![Fraud Rate by Type](fraud_rate_by_type.png)
+
+### Top High-Value Fraud Cases
+![Top Fraud Cases](top10_fraud_cases.png)
+
+### Joined Accounts View
+![Accounts Join](accounts_join_preview.png)
+
+### Fraud Rate by Group
+![Fraud by Group](fraud_rate_by_group.png)
+
+###  Fraud-Sending Accounts
+![Top Fraud Accounts](top_fraud_accounts.png)
