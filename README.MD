@@ -92,6 +92,10 @@ WHERE isFraud = 1
 ORDER BY amount DESC
 LIMIT 10;
 ```
+
+### Additional SQL Queries Used
+
+```sql
 -- Create helper tables (accounts + transaction groups)
 DROP TABLE IF EXISTS accounts;
 
