@@ -46,7 +46,6 @@ USE fraud_detection;
 SELECT COUNT(*) 
 FROM transactions;
 
-```sql
 -- Preview the table
 SELECT *
 FROM transactions
@@ -63,7 +62,7 @@ SELECT
     ) AS fraud_rate_percent
 FROM transactions;
 
-```sql
+
 -- Fraud rate by transaction type
 SELECT
     type,
@@ -77,7 +76,7 @@ FROM transactions
 GROUP BY type
 ORDER BY fraud_rate_percent DESC;
 
-```sql
+
 -- Top high-value fraud cases (money emptied)
 SELECT
     step,
@@ -113,7 +112,6 @@ FROM (
 ) AS all_names;
 
 
-```sql
 -- Create a table grouping transaction types
 DROP TABLE IF EXISTS transaction_types;
 
@@ -128,7 +126,6 @@ SELECT DISTINCT
 FROM transactions;
 
 
-```sql
 -- Join accounts with transactions (sender + receiver)
 SELECT
     t.step,
@@ -145,7 +142,6 @@ JOIN accounts d
 LIMIT 20;
 
 
-```sql
 -- Fraud rate by grouped transaction types
 SELECT
     tt.type,
@@ -163,7 +159,6 @@ GROUP BY tt.type, tt.type_group
 ORDER BY fraud_rate_percent DESC;
 
 
-```sql
 -- Accounts with the highest fraud-sending behaviour
 WITH sender_fraud AS (
     SELECT
